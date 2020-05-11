@@ -21,7 +21,7 @@ function post(req,res){
        return  res.send(err);
       }
       const returnBooks= books.map((book)=>{
-        const newBook = book;
+        const newBook = book.toJSON();
         console.log("book",newBook)
 
         newBook.links={};
